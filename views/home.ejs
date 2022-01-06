@@ -1,0 +1,12 @@
+<%- include("partials/header.ejs") %> <% content2.forEach(function(element){ %>
+<h1><%= element.Title %></h1>
+<p>
+  <%= element.Body.substring(0,500)%><a href="/posts/<%=element.Title%>"
+    >Read More</a
+  >
+</p>
+<% }) %>
+<form action="/compose" method="get" class="compose">
+  <button type="submit" class="btn btn-light">Compose</button>
+</form>
+<%- include("partials/footer.ejs") %>
